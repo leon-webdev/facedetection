@@ -1,16 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Navigation from '.Navigation/Navigation';
-
+import Navigation from './Components/Navigation/Navigation';
+import Logo from './Components/Logo/Logo';
+import ImageForm from './Components/ImageForm/ImageForm';
 
 function App() {
   return (
     <div className="App">
       <Navigation />
-      {/* <Logo />
-      <Rank />
-      <InputImage />
+      <Logo />
+      <ImageForm />
+      {/* <Rank />
+      
       <FaceDetection /> */}
     </div>
   );
