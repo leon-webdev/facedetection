@@ -74,10 +74,11 @@ class App extends Component {
   } 
 
   render() {
+    const { imageUrl, box, route } = this.state;
   return (
     <div className="App">
       <Particles className='particles' params={ particlesParams }/>
-      { this.state.route === 'home'
+      { route === 'home'
         ? <div>
             <div className='flex justify-around items-center ma2'>
               <Logo />
@@ -85,10 +86,10 @@ class App extends Component {
             </div>
             <RankUsers />
             <ImageForm onInputChange={ this.onInputChange } onButtonSubmit={ this.onSubmit }/>  
-            <FaceDetection imageUrl={ this.state.imageUrl } faceCoord={ this.state.box } />
+            <FaceDetection imageUrl={ imageUrl } faceCoord={ box } />
           </div>
         : (
-          this.state.route === 'signin' 
+          route === 'signin' 
           ? <SignIn onRouteChange={ this.onRouteChange }/>
           : <Register onRouteChange={ this.onRouteChange }/>
         )
